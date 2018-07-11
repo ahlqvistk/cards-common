@@ -1,0 +1,25 @@
+{
+  "name": "cards-common",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "jest --watchAll",
+    "test:once": "jest"
+  },
+  "pre-commit": [
+    "lint",
+    "test:once"
+  ],
+  "author": "Kristoffer Ahlqvist",
+  "devDependencies": {
+    "babel-jest": "^23.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.3.0",
+    "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.1"
+  }
+}
