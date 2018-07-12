@@ -1,4 +1,9 @@
-const {getRank, getSuit, getUnicodeSuit} = require('./get-rank-suit');
+const {
+  getRank,
+  getSuit,
+  getUnicodeSuit,
+  getValue,
+} = require('./get-rank-suit');
 
 test('should return the right rank', () => {
   expect(getRank('c7')).toEqual('7');
@@ -19,4 +24,14 @@ test('should return the right unicode suit', () => {
   expect(getUnicodeSuit('sA')).toEqual('\u2660');
   expect(getUnicodeSuit('h4')).toEqual('\u2665');
   expect(getUnicodeSuit('d10')).toEqual('\u2666');
+});
+
+test('should return the right value', () => {
+  expect(getValue('c2')).toBe(2);
+  expect(getValue('d5')).toBe(5);
+  expect(getValue('h10')).toBe(10);
+  expect(getValue('sJ')).toBe(11);
+  expect(getValue('cQ')).toBe(12);
+  expect(getValue('cK')).toBe(13);
+  expect(getValue('cA')).toBe(14);
 });
