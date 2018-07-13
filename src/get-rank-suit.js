@@ -51,7 +51,7 @@ function getValue(card) {
     'Q': 12,
     'K': 13,
     'A': 14,
-  }
+  };
 
   return values[rank];
 }
