@@ -5,7 +5,9 @@ module.exports = function invalidBids(state) {
 
   const nrOCards = state.players[0].cards.length;
   const currentBidTotal = state.players.reduce((acc, curr) => {
-    return curr.hasOwnProperty('bid') && curr.bid ? acc + curr.bid : acc + 0;
+    return curr.hasOwnProperty('bid') && curr.bid && curr.bid >= 0 ?
+      acc + curr.bid :
+      acc + 0;
   }, 0);
 
   if (nrOCards >= currentBidTotal) {

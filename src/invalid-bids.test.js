@@ -17,6 +17,21 @@ test('should return an array of invalid bids', () => {
 
 test('should return an array of invalid bids', () => {
   const state = {
+    activePlayer: 'a',
+    dealer: 'a',
+    players: [
+      {cards: ['c2', 'c3', 'c4', 'c5', 'c6'], socket: {id: 'a'}, bid: -1},
+      {cards: ['d2', 'd3', 'd4', 'd5', 'd6'], socket: {id: 'b'}, bid: 2},
+      {cards: ['h2', 'h3', 'h4', 'h5', 'h6'], socket: {id: 'c'}, bid: 2},
+      {cards: ['s2', 's3', 's4', 's5', 's6'], socket: {id: 'd'}, bid: 1},
+    ],
+  };
+
+  expect(invalidBids(state)).toEqual([0]);
+});
+
+test('should return an array of invalid bids', () => {
+  const state = {
     activePlayer: 'd',
     dealer: 'a',
     players: [
