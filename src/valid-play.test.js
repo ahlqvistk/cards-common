@@ -57,3 +57,19 @@ test('players that can\'t follow suit can play any card on hand', () => {
   expect(validPlay('c2', state)).toBe(false);
   expect(validPlay('c3', state)).toBe(false);
 });
+
+test('last player can play it\'s card', () => {
+  const state = {
+    activePlayer: 'a',
+    dealer: 'a',
+    leadingPlayer: 'b',
+    players: [
+      {cards: ['c2'], socket: {id: 'a'}},
+      {cards: [], playedCard: 'd3', socket: {id: 'b'}},
+      {cards: [], playedCard: 'h4', socket: {id: 'c'}},
+      {cards: [], playedCard: 's4', socket: {id: 'd'}},
+    ],
+  };
+  expect(validPlay('c2', state)).toBe(true);
+  expect(validPlay('c3', state)).toBe(false);
+});

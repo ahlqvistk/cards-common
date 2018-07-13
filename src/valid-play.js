@@ -2,7 +2,9 @@ const getPlayer = require('./get-player');
 const {getSuit} = require('./get-rank-suit');
 
 module.exports = function validPlay(playedCard, state) {
-  const currentPlayersHand = getPlayer(state.activePlayer, state.players).cards;
+  const currentPlayer = getPlayer(state.activePlayer, state.players);
+  const currentPlayersHand = currentPlayer &&
+    currentPlayer.hasOwnProperty('cards') ? currentPlayer.cards : [];
   const playedCardInHand = currentPlayersHand.includes(playedCard);
 
   // Only cards in hand can be played
