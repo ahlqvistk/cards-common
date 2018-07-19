@@ -29,6 +29,7 @@ const expected = {
     [2, 12, 12, 2],
     [3, 5, 1, 1],
   ],
+  totals: [28, 32, 28, 11],
 };
 
 test('should return a scoreboard object', () => {
