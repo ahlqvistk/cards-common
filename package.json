@@ -2,11 +2,13 @@
   "name": "cards-common",
   "version": "1.0.0",
   "scripts": {
-    "build": "parcel build src/index.js --out-dir ./ --target node",
+    "build": "microbundle",
     "lint": "eslint src",
     "test": "jest --watchAll",
     "test:once": "jest"
   },
+  "source": "src/index.js",
+  "main": "dist/cards-common.js",
   "pre-commit": [
     "lint",
     "test:once"
@@ -19,7 +21,7 @@
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.3.0",
-    "parcel-bundler": "^1.9.7",
+    "microbundle": "^0.6.0",
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
