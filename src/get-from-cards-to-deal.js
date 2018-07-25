@@ -1,7 +1,7 @@
-module.exports = function getFromCardsToDeal(
+export function getFromCardsToDeal(
   cardsToDeal, nrOfPlayers, dealOrder
 ) {
   return cardsToDeal.filter((card, index) => {
     return (index - dealOrder) % nrOfPlayers === 0;
   });
-};
+}

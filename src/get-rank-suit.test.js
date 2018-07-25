@@ -1,9 +1,9 @@
-const {
+import {
   getRank,
   getSuit,
   getUnicodeSuit,
   getValue,
-} = require('./get-rank-suit');
+} from './get-rank-suit';
 
 test('should return the right rank', () => {
   expect(getRank('c7')).toEqual('7');

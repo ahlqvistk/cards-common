@@ -1,4 +1,4 @@
-const removeItemFromArray = require('./remove-item-from-array');
+import {removeItemFromArray} from './remove-item-from-array';
 
 test('should remove passed item from array', () => {
   expect(removeItemFromArray('c', ['a', 'b', 'c', 'd']))

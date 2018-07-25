@@ -1,4 +1,4 @@
-const shuffleArray = require('./shuffle-array');
+import {shuffleArray} from './shuffle-array';
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

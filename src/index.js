@@ -1,49 +1,24 @@
-const createDeck = require('./create-deck');
-const dealCards = require('./deal-cards');
-const getDealOrder = require('./get-deal-order');
-const getFromCardsToDeal = require('./get-from-cards-to-deal');
-const getPlayerIndexFromId = require('./get-player-index-from-id');
-const getPlayer = require('./get-player');
-const {
+export {createDeck} from './create-deck';
+export {dealCards} from './deal-cards';
+export {getDealOrder} from './get-deal-order';
+export {getFromCardsToDeal} from './get-from-cards-to-deal';
+export {getPlayerIndexFromId} from './get-player-index-from-id';
+export {getPlayer} from './get-player';
+export {
   getRank,
   getSuit,
   getUnicodeSuit,
   getValue,
-} = require('./get-rank-suit');
-const getScoreboard = require('./get-scoreboard');
-const getWinningCardIndex = require('./get-winning-card-index');
-const invalidBids = require('./invalid-bids');
-const nextPlayer = require('./next-player');
-const orderArrayFromIndex = require('./order-array-from-index');
-const pickCards = require('./pick-cards');
-const randomFromArray = require('./random-from-array');
-const removeItemFromArray = require('./remove-item-from-array');
-const removeKeys = require('./remove-keys');
-const shuffleArray = require('./shuffle-array');
-const validBid = require('./valid-bid');
-const validPlay = require('./valid-play');
-
-module.exports = {
-  createDeck,
-  dealCards,
-  getDealOrder,
-  getFromCardsToDeal,
-  getPlayerIndexFromId,
-  getPlayer,
-  getRank,
-  getSuit,
-  getUnicodeSuit,
-  getValue,
-  getScoreboard,
-  getWinningCardIndex,
-  invalidBids,
-  nextPlayer,
-  orderArrayFromIndex,
-  pickCards,
-  randomFromArray,
-  removeItemFromArray,
-  removeKeys,
-  shuffleArray,
-  validBid,
-  validPlay,
-};
+} from './get-rank-suit';
+export {getScoreboard} from './get-scoreboard';
+export {getWinningCardIndex} from './get-winning-card-index';
+export {invalidBids} from './invalid-bids';
+export {nextPlayer} from './next-player';
+export {orderArrayFromIndex} from './order-array-from-index';
+export {pickCards} from './pick-cards';
+export {randomFromArray} from './random-from-array';
+export {removeItemFromArray} from './remove-item-from-array';
+export {removeKeys} from './remove-keys';
+export {shuffleArray} from './shuffle-array';
+export {validBid} from './valid-bid';
+export {validPlay} from './valid-play';

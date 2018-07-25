@@ -1,4 +1,4 @@
-const pickCards = require('./pick-cards');
+import {pickCards} from './pick-cards';
 
 const deck = {
   status: 'shuffled',

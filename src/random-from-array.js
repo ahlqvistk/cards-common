@@ -1,3 +1,3 @@
-module.exports = function randomFromArray(arr) {
+export function randomFromArray(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
-};
+}

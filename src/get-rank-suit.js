@@ -1,15 +1,8 @@
-module.exports = {
-  getRank,
-  getSuit,
-  getUnicodeSuit,
-  getValue,
-};
-
-function getRank(card) {
+export function getRank(card) {
   return card.slice(1);
 }
 
-function getSuit(card) {
+export function getSuit(card) {
   switch (card.slice(0, 1)) {
   case 'c':
     return 'clubs';
@@ -22,7 +15,7 @@ function getSuit(card) {
   }
 }
 
-function getUnicodeSuit(card) {
+export function getUnicodeSuit(card) {
   switch (card.slice(0, 1)) {
   case 'c':
     return '\u2663';
@@ -35,7 +28,7 @@ function getUnicodeSuit(card) {
   }
 }
 
-function getValue(card) {
+export function getValue(card) {
   const rank = getRank(card);
   const values = {
     '2': 2,

@@ -1,4 +1,4 @@
-const dealCards = require('./deal-cards');
+import {dealCards} from './deal-cards';
 
 const deck = {
   status: 'shuffled',

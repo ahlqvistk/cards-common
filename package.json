@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {
-    "build": "parcel build src/index.js --out-dir=lib --target=node",
+    "build": "BABEL_ENV=build rollup -c",
     "lint": "eslint src",
-    "test": "jest --watchAll",
-    "test:once": "jest"
+    "test": "BABEL_ENV=test jest --watchAll",
+    "test:once": "BABEL_ENV=test jest"
   },
   "pre-commit": [
     "lint",
@@ -16,12 +16,14 @@
   "devDependencies": {
     "babel-jest": "^23.2.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.4.1",
-    "parcel-bundler": "^1.9.7",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^3.0.7"
   },
   "dependencies": {
     "deep-equal": "^1.0.1"

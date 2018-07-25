@@ -1,4 +1,4 @@
-const getWinningCardIndex = require('./get-winning-card-index');
+import {getWinningCardIndex} from './get-winning-card-index';
 
 test('should return correct index', () => {
   expect(getWinningCardIndex('s5', 'd3', ['s5', 's7', 'c2', 'hA'])).toBe(1);

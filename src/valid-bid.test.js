@@ -1,4 +1,4 @@
-const validBid = require('./valid-bid');
+import {validBid} from './valid-bid';
 
 test('should return true or false for bids', () => {
   const state = {

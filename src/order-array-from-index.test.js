@@ -1,4 +1,4 @@
-const orderArrayFromIndex = require('./order-array-from-index');
+import {orderArrayFromIndex} from './order-array-from-index';
 
 const arr1 = ['a', 'b', 'c', 'd'];
 const arr2 = ['a', 'b', 'c', 'd', 'e', 'f'];

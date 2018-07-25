@@ -1,4 +1,4 @@
-const createDeck = require('./create-deck');
+import {createDeck} from './create-deck';
 
 test('returns an array', () => {
   expect(createDeck()).toEqual(expect.arrayContaining([]));

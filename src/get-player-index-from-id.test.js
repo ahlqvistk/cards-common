@@ -1,4 +1,4 @@
-const getPlayerIndexFromId = require('./get-player-index-from-id');
+import {getPlayerIndexFromId} from './get-player-index-from-id';
 
 const players = [
   {socket: {id: 'a'}},

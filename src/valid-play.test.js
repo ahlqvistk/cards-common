@@ -1,4 +1,4 @@
-const validPlay = require('./valid-play');
+import {validPlay} from './valid-play';
 
 test('first player can play any card on hand', () => {
   const state = {

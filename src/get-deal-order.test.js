@@ -1,4 +1,4 @@
-const getDealOrder = require('./get-deal-order');
+import {getDealOrder} from './get-deal-order';
 
 test('should return the right order for different ids', () => {
   const players = [

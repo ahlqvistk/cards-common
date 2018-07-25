@@ -1,4 +1,4 @@
-module.exports = function invalidBids(state) {
+export function invalidBids(state) {
   if (state.activePlayer !== state.dealer) {
     return [];
   }
@@ -15,4 +15,4 @@ module.exports = function invalidBids(state) {
   }
 
   return [];
-};
+}

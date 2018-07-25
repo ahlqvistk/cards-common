@@ -1,4 +1,4 @@
-const removeKeys = require('./remove-keys');
+import {removeKeys} from './remove-keys';
 
 const keys = ['a', 'c', 'e'];
 const obj = {

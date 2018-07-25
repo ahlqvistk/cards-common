@@ -1,4 +1,4 @@
-const invalidBids = require('./invalid-bids');
+import {invalidBids} from './invalid-bids';
 
 test('should return an array of invalid bids', () => {
   const state = {

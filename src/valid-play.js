@@ -1,7 +1,7 @@
-const getPlayer = require('./get-player');
-const {getSuit} = require('./get-rank-suit');
+import {getPlayer} from './get-player';
+import {getSuit} from './get-rank-suit';
 
-module.exports = function validPlay(playedCard, state) {
+export function validPlay(playedCard, state) {
   const currentPlayer = getPlayer(state.activePlayer, state.players);
   const currentPlayersHand = currentPlayer &&
     currentPlayer.hasOwnProperty('cards') ? currentPlayer.cards : [];
@@ -33,4 +33,4 @@ module.exports = function validPlay(playedCard, state) {
   }
 
   return false;
-};
+}

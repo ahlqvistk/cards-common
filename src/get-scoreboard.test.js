@@ -1,4 +1,4 @@
-const getScoreboard = require('./get-scoreboard');
+import {getScoreboard} from './get-scoreboard';
 
 const players = [
   {

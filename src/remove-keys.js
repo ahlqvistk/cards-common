@@ -1,4 +1,4 @@
-module.exports = function removeKeys(keys, obj) {
+export function removeKeys(keys, obj) {
   const newObj = Object.assign({}, obj);
 
   keys.forEach((key) => {
@@ -6,4 +6,4 @@ module.exports = function removeKeys(keys, obj) {
   });
 
   return newObj;
-};
+}

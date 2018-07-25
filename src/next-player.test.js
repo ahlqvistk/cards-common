@@ -1,4 +1,4 @@
-const nextPlayer = require('./next-player');
+import {nextPlayer} from './next-player';
 
 test('should return the next player', () => {
   const players = [

@@ -1,4 +1,16 @@
 {
-  "plugins": ["transform-object-rest-spread"],
-  "presets": ["env"]
+  "env": {
+    "build": {
+      "presets": [
+        ["env", {"modules": false}]
+      ],
+      "plugins": ["transform-object-rest-spread"]
+    },
+    "test": {
+      "presets": [
+        ["env"]
+      ],
+      "plugins": ["transform-object-rest-spread"]
+    }
+  }
 }

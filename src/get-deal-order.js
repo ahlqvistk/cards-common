@@ -1,4 +1,4 @@
-module.exports = function getDealOrder(dealer, playerId, players) {
+export function getDealOrder(dealer, playerId, players) {
   function getPlacement(players, id) {
     return players
       .map((player, index) => ({id: player.socket.id, placement: index}))
@@ -12,4 +12,4 @@ module.exports = function getDealOrder(dealer, playerId, players) {
   return (
     (playerPlacement - dealerPlacement) + players.length - 1
   ) % players.length;
-};
+}

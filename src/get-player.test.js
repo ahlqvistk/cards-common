@@ -1,4 +1,4 @@
-const getPlayer = require('./get-player');
+import {getPlayer} from './get-player';
 
 const state = {
   players: [

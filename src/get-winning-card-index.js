@@ -1,6 +1,6 @@
-const {getSuit, getValue} = require('./get-rank-suit');
+import {getSuit, getValue} from './get-rank-suit';
 
-module.exports = function getWinningCardIndex(leadingCard, trump, cards) {
+export function getWinningCardIndex(leadingCard, trump, cards) {
   const leadingSuit = getSuit(leadingCard);
   const trumpSuit = getSuit(trump);
   const splitCards = cards.map((card, index) => ({
@@ -16,4 +16,4 @@ module.exports = function getWinningCardIndex(leadingCard, trump, cards) {
 
   const leadingCards = splitCards.filter((card) => card.suit === leadingSuit);
   return leadingCards.sort((a, b) => b.value - a.value)[0].index;
-};
+}

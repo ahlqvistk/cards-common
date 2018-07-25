@@ -1,7 +1,7 @@
-const getDealOrder = require('./get-deal-order');
-const getFromCardsToDeal = require('./get-from-cards-to-deal');
+import {getDealOrder} from './get-deal-order';
+import {getFromCardsToDeal} from './get-from-cards-to-deal';
 
-module.exports = function dealCards(nrOfCards, dealer, deck, players) {
+export function dealCards(nrOfCards, dealer, deck, players) {
   const cardsToDeal = deck.cards.slice(0, nrOfCards * players.length);
   const remainingCards = deck.cards.slice(nrOfCards * players.length);
 
@@ -16,4 +16,4 @@ module.exports = function dealCards(nrOfCards, dealer, deck, players) {
   });
 
   return {newDeck: {...deck, cards: remainingCards}, newPlayers};
-};
+}

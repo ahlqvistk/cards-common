@@ -1,4 +1,4 @@
-module.exports = function validBid(bid, state) {
+export function validBid(bid, state) {
   const nrOfCards = state.players[0].cards.length;
 
   if (bid > nrOfCards || bid < 0) {
@@ -18,4 +18,4 @@ module.exports = function validBid(bid, state) {
   }
 
   return true;
-};
+}
