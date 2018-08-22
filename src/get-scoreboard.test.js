@@ -3,19 +3,19 @@ import {getScoreboard} from './get-scoreboard';
 const players = [
   {
     points: [0, 10, 13, 0, 2, 3],
-    socket: {id: 'a'},
+    name: 'a',
   },
   {
     points: [1, 1, 3, 10, 12, 5],
-    socket: {id: 'b'},
+    name: 'b',
   },
   {
     points: [0, 2, 2, 11, 12, 1],
-    socket: {id: 'c'},
+    name: 'c',
   },
   {
     points: [5, 1, 0, 2, 2, 1],
-    socket: {id: 'd'},
+    name: 'd',
   },
 ];
 
